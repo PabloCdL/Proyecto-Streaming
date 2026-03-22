@@ -96,6 +96,24 @@ void Evalcuaion()
         nivelP = LeerTexto("Ingrese el nivel de produccion (baja, media, alta)").ToLower();
     }
 
+    //Reglas de calsificacion y horario
+    if (clasificacion == "+13")
+    {
+        if (hora < 6 || hora > 22)
+        {
+            valido = false;
+            razon = "Horario no permitido :(";
+        }
+    }
+    else if (clasificacion == "+18")
+    {
+        if (hora >= 5 && hora < 22)
+        {
+            valido = false;
+            razon = "horario no permitido :(";
+        }
+    }
+
 }
 
 string LeerTexto(string mensaje)
