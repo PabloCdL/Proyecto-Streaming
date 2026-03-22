@@ -158,6 +158,42 @@ void Evalcuaion()
     }
     totalevaluados++;
 
+    //Impacto
+    if (!valido)
+    {
+        Console.WriteLine($"Rechazar: {razon}");
+        rechazados++;
+    }
+    else
+    {
+        if (nivelP == "alto" || duracion > 120 || (hora >= 20 && hora <= 23))
+        {
+            impacto = "alto";
+            impactoalto++;
+        }
+        else if (nivelP == "medio" || (duracion >= 60 && duracion <= 120))
+        {
+            impacto = "medio";
+            impactomedio++;
+        }
+        else
+        {
+            impacto = "baja";
+            impactobajo++;
+        }
+
+        if (impacto == "alto")
+        {
+            Console.WriteLine("Enviar a revision (Impacto alto)");
+            revision++;
+        }
+        else
+        {
+            Console.WriteLine($"Publicar (Impacto {impacto})");
+            publicado++;
+        }
+    }
+
 }
 
 string LeerTexto(string mensaje)
