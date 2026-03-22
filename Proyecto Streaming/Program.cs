@@ -212,3 +212,17 @@ int LeerEntero(string mensaje)
     return num;
 }
 
+void Estadisticas()
+{
+    Console.WriteLine("Estadisticas");
+    Console.WriteLine($"Total de evaluaciones: {totalevaluados}");
+    Console.WriteLine($"Publicaciones: {publicado}");
+    Console.WriteLine($"Rechazados: {rechazados}");
+    Console.WriteLine($"Revision: {revision}");
+    if (totalevaluados > 0)
+    {
+        porcentaje = (double)publicado / totalevaluados * 100;
+        Console.WriteLine($"El porcentaje de aprovacion es de: {porcentaje:F2} %");
+    }
+}
+
