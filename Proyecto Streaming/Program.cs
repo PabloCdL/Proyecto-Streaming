@@ -113,6 +113,42 @@ void Evalcuaion()
             razon = "horario no permitido :(";
         }
     }
+    //Reglas de duracion
+    if (valido)
+    {
+        if (tipocontenido == "película" || tipocontenido == "pelicula")
+        {
+            if (duracion < 60 || duracion > 180)
+            {
+                valido = false;
+                razon = "Duracion esta fuera de rango para pelicula";
+            }
+        }
+        else if (tipocontenido == "serie")
+        {
+            if (duracion < 20 || duracion > 90)
+            {
+                valido = false;
+                razon = "Duracion fuera de rango para serie";
+            }
+        }
+        else if (tipocontenido == "documental")
+        {
+            if (duracion < 30 || duracion > 120)
+            {
+                valido = false;
+                razon = "Duracion fuera de rango para documental";
+            }
+        }
+        else if (tipocontenido == "evento")
+        {
+            if (duracion < 30 || duracion > 240)
+            {
+                valido = false;
+                razon = "Duracion fuera de rango para evento";
+            }
+        }
+    }
 
 }
 
