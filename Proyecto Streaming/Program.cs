@@ -29,20 +29,31 @@ do
     switch (opcion)
     {
     case 1: // Evaluar nuevo contenido
-
-        break;
+            Console.Clear();
+            Evaluacion();
+            Console.ReadKey();
+            Console.WriteLine("Presione cualquier letra para volver al menú");
+            Console.Clear();
+            break;
     case 2: // Mostrar reglas del sistema
-
-        break;
+            Console.Clear();
+            reglas();
+            break;
     case 3: // Estadisticas de la sesion
-
-        break;
+            Console.Clear();
+            Estadisticas();
+            break;
     case 4: //Reiniciar estadisticas
-
-        break;
+            reiniciar();
+            await Task.Delay(1000);
+            Console.Clear();
+            break;
     case 5: // resumen
-
-        break;
+            Console.Clear();
+            Console.WriteLine("Resumidito");
+            Estadisticas();
+            Console.WriteLine("Presiones cualquier tecla para salir :D");
+            break;
     default: // Caso invalido
         Console.WriteLine("Opcion no valida");
         break;
@@ -65,7 +76,7 @@ do
         }
         Console.Clear();
     }
-void Evalcuaion()
+void Evaluacion()
 {
     valido = true;
     razon = "";
