@@ -226,3 +226,11 @@ void Estadisticas()
     }
 }
 
+void reiniciar()
+{
+    totalevaluados = 0;
+    publicado = 0;
+    revision = 0;
+    rechazados = 0;
+    Console.WriteLine("Reiniciando...");
+}
