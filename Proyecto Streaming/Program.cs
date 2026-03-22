@@ -150,6 +150,14 @@ void Evalcuaion()
         }
     }
 
+    //Reglas de produccion
+    if (valido && nivelP == "baja" && clasificacion == "+18")
+    {
+        valido = false;
+        razon = "Produccion baja solo para todo publico o +13";
+    }
+    totalevaluados++;
+
 }
 
 string LeerTexto(string mensaje)
