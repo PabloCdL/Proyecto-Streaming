@@ -234,3 +234,15 @@ void reiniciar()
     rechazados = 0;
     Console.WriteLine("Reiniciando...");
 }
+
+void reglas()
+{
+    for (int i = 0; i < 20; i++) Console.Write("=");
+    Console.WriteLine("Reglas tecnicas :D");
+    Console.WriteLine("1. Peliculas: 60-180 minutos");
+    Console.WriteLine("2. Serie: 20-90 minutos");
+    Console.WriteLine("3. Documental: 30-120 minutos");
+    Console.WriteLine("4. Evento en vivo: 30-240 minutos");
+    Console.WriteLine("5. Reloj de 24 horas");
+    Console.WriteLine("6. Opciones de contenido:\n * Peliculas \n * Serie \n * Documental \n Envento en vivo");
+}
