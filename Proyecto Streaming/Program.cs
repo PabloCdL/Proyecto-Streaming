@@ -69,6 +69,33 @@ void Evalcuaion()
     valido = true;
     razon = "";
     impacto = "";
+    Console.WriteLine("EVALUACION DE CONTENIDO");
+    tipocontenido = LeerTexto("Tipo de contenido (película, serie, documetal, evento)").ToLower();
+    while ((tipocontenido != "película" && tipocontenido != "pelicula") && tipocontenido != "serie" && tipocontenido != "documental" && tipocontenido != "evento")
+    {
+        Console.WriteLine("Error. Ingrese una opcion valida o verifique si esta bien escribicida");
+        tipocontenido = LeerTexto("Tipo de contenido (película, serie, documetal, evento)").ToLower();
+    }
+    duracion = LeerEntero("Ingrese la duracion en minutos");
+    clasificacion = LeerTexto("Clasificacion (Todo publico, +13, +18)").ToLower();
+    while (clasificacion != "todo publico" && clasificacion != "+13" && clasificacion != "+18")
+    {
+        Console.WriteLine("Error. Ingrese una opcion valida o verifique si esta bien escribicida");
+        clasificacion = LeerTexto("Clasificacion (Todo publico, +13, +18)").ToLower();
+    }
+    hora = LeerEntero("Ingrese la hora programada (0-23)");
+    while (hora >= 24 || hora <= 0)
+    {
+        Console.WriteLine("Error. Ingrese una hora valida");
+        hora = LeerEntero("Ingrese la hora programada (0-23)");
+    }
+    nivelP = LeerTexto("Ingrese el nivel de produccion (baja, media, alta)").ToLower();
+    while (nivelP != "baja" && nivelP != "media" && nivelP != "alta")
+    {
+        Console.WriteLine("Error. Ingrese una opcion valida o verifique si esta bien escribicida");
+        nivelP = LeerTexto("Ingrese el nivel de produccion (baja, media, alta)").ToLower();
+    }
+
 }
 
 string LeerTexto(string mensaje)
