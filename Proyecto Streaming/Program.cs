@@ -64,5 +64,11 @@ do
         }
         Console.Clear();
     }
+void Evalcuaion()
+{
+    valido = true;
+    razon = "";
+    impacto = "";
+}
 
     
