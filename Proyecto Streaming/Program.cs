@@ -71,4 +71,19 @@ void Evalcuaion()
     impacto = "";
 }
 
-    
+string LeerTexto(string mensaje)
+{
+    Console.WriteLine(mensaje);
+    return Console.ReadLine() ?? "";
+}
+
+int LeerEntero(string mensaje)
+{
+    Console.WriteLine(mensaje);
+    while (!int.TryParse(Console.ReadLine(), out num))
+    {
+        Console.WriteLine("Error papito. Invalido lo que metio");
+    }
+    return num;
+}
+
