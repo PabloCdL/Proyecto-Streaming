@@ -20,3 +20,49 @@ string razon = "";
 string impacto = "";
 int num;
 double porcentaje;
+
+do
+{
+    menu();
+    Console.Clear();
+    switch (opcion)
+    {
+    case 1: // Evaluar nuevo contenido
+
+        break;
+    case 2: // Mostrar reglas del sistema
+
+        break;
+    case 3: // Estadisticas de la sesion
+
+        break;
+    case 4: //Reiniciar estadisticas
+
+        break;
+    case 5: // resumen
+
+        break;
+    default: // Caso invalido
+        Console.WriteLine("Opcion no valida");
+        break;
+    }
+
+} while (opcion != 5);
+
+    void menu()
+    {
+        Console.WriteLine("______Menú_____");
+        Console.WriteLine("1. Evaluar nuevo contenido");
+        Console.WriteLine("2. Mostrar reglas del sistema");
+        Console.WriteLine("3. Estadisticas de la sesion");
+        Console.WriteLine("4. Reiniciar estadisticas");
+        Console.WriteLine("5. Salir");
+        if (!int.TryParse(Console.ReadLine(), out opcion))
+        {
+            Console.WriteLine("Invalido: \n Intente de nuevo");
+            Console.ReadKey();
+        }
+        Console.Clear();
+    }
+
+    
